@@ -3,13 +3,14 @@
 <head>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
 </script>
+
 <script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $.get("http://192.168.1.3/studia_facile/index.php",function(data,status){
-      alert("Data: " + data + "\nStatus: " + status);
-    });
-  });
+x$( '#button' ).touchstart(function(e) {
+                x$().xhr('http://192.168.1.3/studia_facile/index.php',
+                    function(){
+                        alert(this.responseText);
+                    }
+                );
 });
 </script>
 </head>
